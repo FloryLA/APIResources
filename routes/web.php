@@ -19,7 +19,7 @@ Route::group(['prefix'=>'api'], function(){
    //Route::apiResource('posts','Api\PostController');
 });
 
-
+//Ruta de tipo recurso con autenticacion que sera comsumida internamente desdw la misma web 
 Route::middleware('auth')->resource('posts','Backend\PostController')->only('index');
 
 Route::get('/home', 'Backend\HomeController@index')->name('home');
